@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Zap } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const navLinks = [
   { label: 'Services', href: '#services' },
@@ -37,7 +38,7 @@ export default function Navbar() {
       >
         {/* Animated glass background */}
         <motion.div
-          className="absolute inset-0 glass border-b border-white/10"
+          className="absolute inset-0 glass border-b border-card-border"
           initial={{ opacity: 0 }}
           animate={{ opacity: scrolled ? 1 : 0 }}
           transition={{ duration: 0.3 }}
@@ -50,7 +51,7 @@ export default function Navbar() {
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 shadow-lg shadow-primary-500/25 transition-shadow group-hover:shadow-primary-500/40">
               <Zap className="h-4 w-4 text-white" strokeWidth={2.5} />
             </span>
-            <span className="text-xl font-bold tracking-tight text-white">
+            <span className="text-xl font-bold tracking-tight text-fg">
               Byte<span className="text-gradient">vora</span>
             </span>
           </a>
@@ -61,7 +62,7 @@ export default function Navbar() {
               <li key={href}>
                 <a
                   href={href}
-                  className="rounded-lg px-3 py-2 text-sm font-medium text-surface-200 transition-colors hover:text-white hover:bg-white/5"
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-body transition-colors hover:text-fg hover:bg-card-hover"
                 >
                   {label}
                 </a>
@@ -70,17 +71,20 @@ export default function Navbar() {
           </ul>
 
           {/* Desktop CTA */}
-          <a
-            href="#contact"
-            className="hidden lg:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all hover:shadow-primary-500/40 hover:brightness-110"
-          >
-            Book a Call
-          </a>
+          <div className="hidden lg:flex items-center gap-3">
+            <ThemeToggle />
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all hover:shadow-primary-500/40 hover:brightness-110"
+            >
+              Book a Call
+            </a>
+          </div>
 
           {/* Mobile hamburger */}
           <button
             type="button"
-            className="relative z-50 flex h-10 w-10 items-center justify-center rounded-lg text-white transition-colors hover:bg-white/10 lg:hidden"
+            className="relative z-50 flex h-10 w-10 items-center justify-center rounded-lg text-fg transition-colors hover:bg-card-hover lg:hidden"
             onClick={() => setMobileOpen((v) => !v)}
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}
@@ -129,7 +133,7 @@ export default function Navbar() {
 
             {/* Panel */}
             <motion.div
-              className="fixed inset-y-0 right-0 z-40 w-full max-w-xs bg-surface-900/95 backdrop-blur-2xl border-l border-white/10 shadow-2xl lg:hidden"
+              className="fixed inset-y-0 right-0 z-40 w-full max-w-xs bg-bg-alt/95 backdrop-blur-2xl border-l border-card-border shadow-2xl lg:hidden"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
@@ -147,7 +151,7 @@ export default function Navbar() {
                       <a
                         href={href}
                         onClick={closeMobile}
-                        className="block rounded-lg px-4 py-3 text-base font-medium text-surface-200 transition-colors hover:bg-white/5 hover:text-white"
+                        className="block rounded-lg px-4 py-3 text-base font-medium text-body transition-colors hover:bg-card-hover hover:text-fg"
                       >
                         {label}
                       </a>
@@ -155,7 +159,8 @@ export default function Navbar() {
                   ))}
                 </ul>
 
-                <div className="mt-auto">
+                <div className="mt-auto flex flex-col gap-4">
+                  <ThemeToggle />
                   <a
                     href="#contact"
                     onClick={closeMobile}

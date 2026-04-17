@@ -66,7 +66,7 @@ export default function Services() {
         className="pointer-events-none absolute inset-0 overflow-hidden"
         aria-hidden
       >
-        <div className="absolute left-1/2 top-0 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary-500/5 blur-3xl" />
+        <div className="glow-layer absolute left-1/2 top-0 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary-500/5 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -81,7 +81,7 @@ export default function Services() {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
             What We <span className="text-gradient">Build</span>
           </h2>
-          <p className="mt-4 text-base text-surface-200 sm:text-lg leading-relaxed">
+          <p className="mt-4 text-base text-body sm:text-lg leading-relaxed">
             End-to-end digital solutions designed for business growth, not just
             code.
           </p>
@@ -100,7 +100,7 @@ export default function Services() {
               key={title}
               variants={cardVariants}
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              className="group relative rounded-2xl glass p-6 sm:p-8 transition-colors duration-300 hover:bg-white/[0.08]"
+              className="group relative rounded-2xl glass p-6 sm:p-8 transition-colors duration-300 hover:bg-card-hover"
             >
               {/* Gradient border on hover */}
               <span
@@ -118,15 +118,15 @@ export default function Services() {
               />
 
               {/* Icon */}
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 ring-1 ring-white/10 transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-primary-500/15">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 ring-1 ring-card-border transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-primary-500/15">
                 <Icon className="h-6 w-6 text-primary-400 transition-colors duration-300 group-hover:text-primary-300" strokeWidth={1.75} />
               </div>
 
               {/* Content */}
-              <h3 className="mt-5 text-lg font-semibold text-white">
+              <h3 className="mt-5 text-lg font-semibold text-fg">
                 {title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-surface-200">
+              <p className="mt-2 text-sm leading-relaxed text-body">
                 {description}
               </p>
 

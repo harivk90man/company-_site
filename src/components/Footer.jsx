@@ -53,10 +53,10 @@ const fadeUp = {
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/5 bg-surface-950">
+    <footer className="relative overflow-hidden border-t border-card-border bg-bg">
       {/* Subtle gradient glow */}
       <div
-        className="pointer-events-none absolute -top-40 left-1/2 h-80 w-[600px] -translate-x-1/2 rounded-full bg-primary-500/5 blur-3xl"
+        className="glow-layer pointer-events-none absolute -top-40 left-1/2 h-80 w-[600px] -translate-x-1/2 rounded-full bg-primary-500/5 blur-3xl"
         aria-hidden
       />
 
@@ -76,14 +76,14 @@ export default function Footer() {
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 shadow-lg shadow-primary-500/25 transition-shadow group-hover:shadow-primary-500/40">
                 <Zap className="h-4 w-4 text-white" strokeWidth={2.5} />
               </span>
-              <span className="text-xl font-bold tracking-tight text-white">
+              <span className="text-xl font-bold tracking-tight text-fg">
                 Byte<span className="text-gradient">vora</span>
               </span>
             </a>
             <p className="mt-4 text-sm font-medium text-gradient leading-relaxed">
               From idea to launch — software built for real business impact.
             </p>
-            <p className="mt-3 text-sm leading-relaxed text-surface-200/70">
+            <p className="mt-3 text-sm leading-relaxed text-muted">
               We partner with startups and growing businesses to design, build, and ship
               digital products that drive measurable results.
             </p>
@@ -97,7 +97,7 @@ export default function Footer() {
             viewport={{ once: true, amount: 0.3 }}
             custom={1}
           >
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-fg">
               Quick Links
             </h3>
             <ul className="flex flex-col gap-2.5">
@@ -105,7 +105,7 @@ export default function Footer() {
                 <li key={href}>
                   <a
                     href={href}
-                    className="group inline-flex items-center gap-1 text-sm text-surface-200/70 transition-colors hover:text-white"
+                    className="group inline-flex items-center gap-1 text-sm text-muted transition-colors hover:text-fg"
                   >
                     {label}
                     <ArrowUpRight className="h-3 w-3 opacity-0 -translate-y-0.5 transition-all group-hover:opacity-100 group-hover:translate-y-0" />
@@ -123,7 +123,7 @@ export default function Footer() {
             viewport={{ once: true, amount: 0.3 }}
             custom={2}
           >
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-fg">
               Services
             </h3>
             <ul className="flex flex-col gap-2.5">
@@ -131,7 +131,7 @@ export default function Footer() {
                 <li key={service}>
                   <a
                     href="#services"
-                    className="group inline-flex items-center gap-1 text-sm text-surface-200/70 transition-colors hover:text-white"
+                    className="group inline-flex items-center gap-1 text-sm text-muted transition-colors hover:text-fg"
                   >
                     {service}
                     <ArrowUpRight className="h-3 w-3 opacity-0 -translate-y-0.5 transition-all group-hover:opacity-100 group-hover:translate-y-0" />
@@ -149,24 +149,24 @@ export default function Footer() {
             viewport={{ once: true, amount: 0.3 }}
             custom={3}
           >
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-fg">
               Contact
             </h3>
             <ul className="flex flex-col gap-3">
               <li>
                 <a
                   href="mailto:hello@bytevora.com"
-                  className="inline-flex items-center gap-2 text-sm text-surface-200/70 transition-colors hover:text-white"
+                  className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-fg"
                 >
                   <Mail className="h-4 w-4 text-primary-400" />
                   hello@bytevora.com
                 </a>
               </li>
-              <li className="inline-flex items-center gap-2 text-sm text-surface-200/70">
+              <li className="inline-flex items-center gap-2 text-sm text-muted">
                 <Phone className="h-4 w-4 text-primary-400" />
                 +91 XXXXX XXXXX
               </li>
-              <li className="inline-flex items-center gap-2 text-sm text-surface-200/70">
+              <li className="inline-flex items-center gap-2 text-sm text-muted">
                 <MapPin className="h-4 w-4 text-primary-400" />
                 India
               </li>
@@ -188,7 +188,7 @@ export default function Footer() {
               key={label}
               href={href}
               aria-label={label}
-              className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-surface-200/70 transition-all hover:border-primary-500/50 hover:bg-primary-500/10 hover:text-white"
+              className="flex h-9 w-9 items-center justify-center rounded-lg border border-card-border text-muted transition-all hover:border-primary-500/50 hover:bg-primary-500/10 hover:text-fg"
             >
               <Icon className="h-4 w-4" />
             </a>
@@ -196,14 +196,14 @@ export default function Footer() {
         </motion.div>
 
         {/* Divider */}
-        <div className="mt-10 border-t border-white/5" />
+        <div className="mt-10 border-t border-card-border" />
 
         {/* Bottom bar */}
         <div className="mt-6 flex flex-col items-center justify-between gap-3 sm:flex-row">
-          <p className="text-xs text-surface-200/50">
+          <p className="text-xs text-muted">
             &copy; 2025 Bytevora Solutions. All rights reserved.
           </p>
-          <p className="text-xs text-surface-200/50">
+          <p className="text-xs text-muted">
             Built with precision.
           </p>
         </div>

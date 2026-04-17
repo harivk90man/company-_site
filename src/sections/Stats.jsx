@@ -63,7 +63,7 @@ function StatItem({ value, suffix, label }) {
         {count}
         {suffix}
       </span>
-      <span className="mt-2 text-sm font-medium text-surface-200/70">
+      <span className="mt-2 text-sm font-medium text-muted">
         {label}
       </span>
     </motion.div>
@@ -75,7 +75,7 @@ export default function Stats() {
   return (
     <section className="relative py-16 sm:py-20">
       {/* Dark gradient background strip */}
-      <div className="absolute inset-0 bg-gradient-to-r from-surface-950 via-surface-900 to-surface-950" />
+      <div className="absolute inset-0 bg-gradient-to-r from-bg via-bg-alt to-bg" />
       <div className="absolute inset-0 glass" />
 
       <motion.div

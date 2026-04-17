@@ -94,7 +94,7 @@ export default function Portfolio() {
     >
       {/* Subtle background glow */}
       <div
-        className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 h-[480px] w-[640px] rounded-full bg-accent-500/5 blur-[120px]"
+        className="glow-layer pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 h-[480px] w-[640px] rounded-full bg-accent-500/5 blur-[120px]"
         aria-hidden
       />
 
@@ -110,7 +110,7 @@ export default function Portfolio() {
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
             Featured <span className="text-gradient">Work</span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-surface-200/70 sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
             Real projects, real impact. Here's what we've built for our clients.
           </p>
         </motion.div>
@@ -139,17 +139,17 @@ export default function Portfolio() {
                 {/* Header row */}
                 <div className="flex flex-wrap items-start justify-between gap-2">
                   <div>
-                    <h3 className="text-lg font-bold text-white">
+                    <h3 className="text-lg font-bold text-fg">
                       {project.name}
                     </h3>
                     {project.client && (
-                      <p className="mt-0.5 text-sm text-surface-200/60">
+                      <p className="mt-0.5 text-sm text-muted">
                         {project.client}
                       </p>
                     )}
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-surface-200">
+                    <span className="inline-flex items-center rounded-full border border-card-border bg-card-bg px-3 py-1 text-xs font-medium text-body">
                       {project.industry}
                     </span>
                     {project.tag && (
@@ -166,7 +166,7 @@ export default function Portfolio() {
                     <span className="text-xs font-semibold uppercase tracking-wider text-primary-400">
                       Problem
                     </span>
-                    <p className="mt-0.5 text-sm leading-relaxed text-surface-200/70">
+                    <p className="mt-0.5 text-sm leading-relaxed text-muted">
                       {project.problem}
                     </p>
                   </div>
@@ -174,7 +174,7 @@ export default function Portfolio() {
                     <span className="text-xs font-semibold uppercase tracking-wider text-primary-400">
                       Solution
                     </span>
-                    <p className="mt-0.5 text-sm leading-relaxed text-surface-200/70">
+                    <p className="mt-0.5 text-sm leading-relaxed text-muted">
                       {project.solution}
                     </p>
                   </div>
@@ -182,7 +182,7 @@ export default function Portfolio() {
                     <span className="text-xs font-semibold uppercase tracking-wider text-primary-400">
                       Outcome
                     </span>
-                    <p className="mt-0.5 text-sm leading-relaxed text-surface-200/70">
+                    <p className="mt-0.5 text-sm leading-relaxed text-muted">
                       {project.outcome}
                     </p>
                   </div>

@@ -26,7 +26,7 @@ export default function CTA() {
     <section className="relative overflow-hidden py-24 sm:py-32">
       {/* Gradient background */}
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-950 via-surface-950 to-accent-500/10"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-950 via-bg to-accent-500/10"
         aria-hidden="true"
       />
 
@@ -39,11 +39,11 @@ export default function CTA() {
 
       {/* Glow orbs */}
       <div
-        className="pointer-events-none absolute -top-24 left-1/4 h-[400px] w-[400px] rounded-full bg-primary-500/15 blur-[120px]"
+        className="glow-layer pointer-events-none absolute -top-24 left-1/4 h-[400px] w-[400px] rounded-full bg-primary-500/15 blur-[120px]"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -bottom-24 right-1/4 h-[350px] w-[350px] rounded-full bg-accent-500/15 blur-[120px]"
+        className="glow-layer pointer-events-none absolute -bottom-24 right-1/4 h-[350px] w-[350px] rounded-full bg-accent-500/15 blur-[120px]"
         aria-hidden="true"
       />
 
@@ -64,7 +64,7 @@ export default function CTA() {
 
         <motion.p
           variants={fadeUp}
-          className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-surface-200/80 sm:text-xl"
+          className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-body sm:text-xl"
         >
           Let&rsquo;s build something that works &mdash; for your users and your
           bottom line.
@@ -84,7 +84,7 @@ export default function CTA() {
 
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 px-8 py-4 text-sm font-semibold text-white/90 transition-all duration-300 hover:border-white/30 hover:bg-white/5"
+            className="inline-flex items-center gap-2 rounded-full border border-card-border px-8 py-4 text-sm font-semibold text-fg transition-all duration-300 hover:border-primary-500/30 hover:bg-card-hover"
           >
             <FileText className="h-4 w-4" />
             Get a Proposal

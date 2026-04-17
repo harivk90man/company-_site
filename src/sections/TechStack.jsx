@@ -85,7 +85,7 @@ export default function TechStack() {
     >
       {/* Subtle background glow */}
       <div
-        className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[480px] w-[640px] rounded-full bg-primary-500/5 blur-[120px]"
+        className="glow-layer pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[480px] w-[640px] rounded-full bg-primary-500/5 blur-[120px]"
         aria-hidden
       />
 
@@ -101,7 +101,7 @@ export default function TechStack() {
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
             Our <span className="text-gradient">Technology Stack</span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-surface-200/70 sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
             Modern tools and frameworks we use to build scalable, future-proof
             solutions.
           </p>
@@ -131,7 +131,7 @@ export default function TechStack() {
                 {techs.map((tech) => (
                   <motion.span
                     key={tech}
-                    className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-sm font-medium text-surface-200 transition-colors hover:border-primary-500/40 hover:bg-primary-500/10 hover:text-white"
+                    className="inline-flex items-center rounded-full border border-card-border bg-card-bg px-3.5 py-1.5 text-sm font-medium text-body transition-colors hover:border-primary-500/40 hover:bg-primary-500/10 hover:text-fg"
                     variants={chipFade}
                   >
                     {tech}
@@ -159,8 +159,8 @@ export default function TechStack() {
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 text-primary-400 transition-colors group-hover:from-primary-500/30 group-hover:to-accent-500/30">
                 <Icon className="h-5 w-5" />
               </div>
-              <h4 className="text-sm font-semibold text-white">{title}</h4>
-              <p className="mt-2 text-sm leading-relaxed text-surface-200/60">
+              <h4 className="text-sm font-semibold text-fg">{title}</h4>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
                 {description}
               </p>
             </motion.div>

@@ -41,7 +41,7 @@ export default function Blog() {
         className="pointer-events-none absolute inset-0 overflow-hidden"
         aria-hidden="true"
       >
-        <div className="absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-primary-500/5 blur-[120px]" />
+        <div className="glow-layer absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-primary-500/5 blur-[120px]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -57,7 +57,7 @@ export default function Blog() {
             Insights &{" "}
             <span className="text-gradient">Resources</span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-surface-200/70 sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
             Thoughts on building better software, AI trends, and startup growth.
             Coming soon.
           </p>
@@ -84,17 +84,17 @@ export default function Blog() {
               </span>
 
               {/* Title */}
-              <h3 className="mt-4 text-lg font-semibold leading-snug text-white">
+              <h3 className="mt-4 text-lg font-semibold leading-snug text-fg">
                 {title}
               </h3>
 
               {/* Description */}
-              <p className="mt-2 text-sm leading-relaxed text-surface-200/70">
+              <p className="mt-2 text-sm leading-relaxed text-muted">
                 {description}
               </p>
 
               {/* Disabled link */}
-              <div className="mt-5 flex items-center gap-1.5 text-sm font-medium text-surface-200/30 cursor-not-allowed">
+              <div className="mt-5 flex items-center gap-1.5 text-sm font-medium text-subtle cursor-not-allowed">
                 <span>Read More</span>
                 <ArrowRight className="h-4 w-4" />
               </div>

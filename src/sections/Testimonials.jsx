@@ -57,7 +57,7 @@ export default function Testimonials() {
         className="pointer-events-none absolute inset-0 overflow-hidden"
         aria-hidden
       >
-        <div className="absolute left-1/2 top-0 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-accent-500/5 blur-3xl" />
+        <div className="glow-layer absolute left-1/2 top-0 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-accent-500/5 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -72,7 +72,7 @@ export default function Testimonials() {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
             What Our Clients <span className="text-gradient">Say</span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-surface-200/70 sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
             Trusted by businesses looking for practical, modern, and
             growth-focused digital solutions.
           </p>
@@ -91,7 +91,7 @@ export default function Testimonials() {
               key={name}
               variants={fadeUp}
               whileHover={{ y: -4, transition: { duration: 0.25 } }}
-              className="group relative rounded-2xl glass p-6 sm:p-8 transition-colors duration-300 hover:bg-white/[0.08]"
+              className="group relative rounded-2xl glass p-6 sm:p-8 transition-colors duration-300 hover:bg-card-hover"
             >
               {/* Star rating */}
               <div className="mb-4 flex gap-1">
@@ -104,15 +104,15 @@ export default function Testimonials() {
               </div>
 
               {/* Quote */}
-              <p className="text-base leading-relaxed text-surface-200/90 sm:text-lg">
+              <p className="text-base leading-relaxed text-body sm:text-lg">
                 &ldquo;{quote}&rdquo;
               </p>
 
               {/* Attribution */}
-              <div className="mt-6 border-t border-white/10 pt-4">
-                <p className="text-sm font-semibold text-white">{name}</p>
+              <div className="mt-6 border-t border-card-border pt-4">
+                <p className="text-sm font-semibold text-fg">{name}</p>
                 {company && (
-                  <p className="mt-0.5 text-sm text-surface-200/60">
+                  <p className="mt-0.5 text-sm text-muted">
                     {company}
                   </p>
                 )}

@@ -69,7 +69,7 @@ export default function Industries() {
         className="pointer-events-none absolute inset-0 overflow-hidden"
         aria-hidden="true"
       >
-        <div className="absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-accent-500/5 blur-[120px]" />
+        <div className="glow-layer absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-accent-500/5 blur-[120px]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -85,7 +85,7 @@ export default function Industries() {
             Industries We{" "}
             <span className="text-gradient">Serve</span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-surface-200/70 sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
             Delivering impact across diverse sectors.
           </p>
         </motion.div>
@@ -103,10 +103,10 @@ export default function Industries() {
               key={name}
               variants={fadeUp}
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              className="group glass rounded-2xl p-6 sm:p-8 transition-colors duration-300 hover:bg-white/[0.08]"
+              className="group glass rounded-2xl p-6 sm:p-8 transition-colors duration-300 hover:bg-card-hover"
             >
               {/* Icon */}
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 ring-1 ring-white/10 transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-primary-500/15">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 ring-1 ring-card-border transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-primary-500/15">
                 <Icon
                   className="h-6 w-6 text-primary-400 transition-colors duration-300 group-hover:text-primary-300"
                   strokeWidth={1.75}
@@ -114,10 +114,10 @@ export default function Industries() {
               </div>
 
               {/* Content */}
-              <h3 className="mt-5 text-lg font-semibold text-white">
+              <h3 className="mt-5 text-lg font-semibold text-fg">
                 {name}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-surface-200/70">
+              <p className="mt-2 text-sm leading-relaxed text-muted">
                 {description}
               </p>
             </motion.div>

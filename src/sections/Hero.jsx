@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Zap } from "lucide-react";
+import { ArrowRight, Zap, Brain, Sparkles, Bot } from "lucide-react";
 
 /* ── animation variants ─────────────────────────────────── */
 const container = {
@@ -40,21 +40,21 @@ export default function Hero() {
 
       {/* Floating gradient orbs */}
       <div
-        className="pointer-events-none absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-primary-500/20 blur-[128px] animate-[float_8s_ease-in-out_infinite]"
+        className="glow-layer pointer-events-none absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-primary-500/20 blur-[128px] animate-[float_8s_ease-in-out_infinite]"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -bottom-32 -right-32 h-[420px] w-[420px] rounded-full bg-accent-500/20 blur-[128px] animate-[float_10s_ease-in-out_infinite_reverse]"
+        className="glow-layer pointer-events-none absolute -bottom-32 -right-32 h-[420px] w-[420px] rounded-full bg-accent-500/20 blur-[128px] animate-[float_10s_ease-in-out_infinite_reverse]"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 h-[320px] w-[320px] rounded-full bg-primary-600/10 blur-[100px] animate-[float_12s_ease-in-out_infinite]"
+        className="glow-layer pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 h-[320px] w-[320px] rounded-full bg-primary-600/10 blur-[100px] animate-[float_12s_ease-in-out_infinite]"
         aria-hidden="true"
       />
 
       {/* Vignette overlay */}
       <div
-        className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,var(--color-surface-950)_100%)]"
+        className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,var(--color-bg)_100%)]"
         aria-hidden="true"
       />
 
@@ -86,7 +86,7 @@ export default function Hero() {
         {/* Subheadline */}
         <motion.p
           variants={fadeUp}
-          className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-surface-200/80 sm:text-xl"
+          className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-body sm:text-xl"
         >
           We design and build websites, mobile apps, SaaS platforms, and
           AI-powered solutions that help businesses scale, automate, and stand
@@ -108,16 +108,36 @@ export default function Hero() {
 
           <a
             href="#portfolio"
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white/90 transition-all duration-300 hover:border-white/30 hover:bg-white/5"
+            className="inline-flex items-center gap-2 rounded-full border border-card-border px-7 py-3.5 text-sm font-semibold text-fg transition-all duration-300 hover:border-primary-500/40 hover:bg-card-hover"
           >
             View Our Work
           </a>
         </motion.div>
 
+        {/* AI Capabilities Strip */}
+        <motion.div
+          variants={fadeUp}
+          className="mt-12 flex flex-wrap items-center justify-center gap-3"
+        >
+          {[
+            { icon: Brain, label: "AI Integration" },
+            { icon: Sparkles, label: "Smart Automation" },
+            { icon: Bot, label: "Custom AI Agents" },
+          ].map(({ icon: Icon, label }) => (
+            <span
+              key={label}
+              className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium text-body"
+            >
+              <Icon className="h-3.5 w-3.5 text-accent-400" />
+              {label}
+            </span>
+          ))}
+        </motion.div>
+
         {/* Trust indicators */}
         <motion.div
           variants={fadeUp}
-          className="mt-12 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-surface-200/50"
+          className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted"
         >
           <span className="flex items-center gap-1.5">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400" />

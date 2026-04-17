@@ -56,7 +56,7 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
   return (
     <motion.div
       variants={fadeUp}
-      className="glass rounded-2xl transition-colors duration-300 hover:bg-white/[0.06]"
+      className="glass rounded-2xl transition-colors duration-300 hover:bg-card-hover"
     >
       <button
         type="button"
@@ -64,13 +64,13 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
         className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left sm:px-8"
         aria-expanded={isOpen}
       >
-        <span className="text-base font-semibold text-white sm:text-lg">
+        <span className="text-base font-semibold text-fg sm:text-lg">
           {question}
         </span>
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/5"
+          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-card-bg"
         >
           <ChevronDown className="h-4 w-4 text-primary-400" />
         </motion.span>
@@ -86,7 +86,7 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
             className="overflow-hidden"
           >
             <div className="px-6 pb-6 sm:px-8">
-              <p className="text-sm leading-relaxed text-surface-200/70 sm:text-base">
+              <p className="text-sm leading-relaxed text-muted sm:text-base">
                 {answer}
               </p>
             </div>
@@ -112,7 +112,7 @@ export default function FAQ() {
         className="pointer-events-none absolute inset-0 overflow-hidden"
         aria-hidden
       >
-        <div className="absolute left-1/2 bottom-0 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-accent-500/5 blur-[120px]" />
+        <div className="glow-layer absolute left-1/2 bottom-0 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-accent-500/5 blur-[120px]" />
       </div>
 
       <div className="relative mx-auto max-w-3xl px-6 lg:px-8">
@@ -128,7 +128,7 @@ export default function FAQ() {
             Frequently Asked{" "}
             <span className="text-gradient">Questions</span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-surface-200/70 sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
             Got questions? We&apos;ve got answers.
           </p>
         </motion.div>

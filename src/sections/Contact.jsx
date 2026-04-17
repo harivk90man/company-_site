@@ -62,7 +62,7 @@ const projectTypes = [
 ];
 
 const inputBase =
-  "w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-surface-200/40 outline-none transition-all duration-200 focus:border-primary-500/50 focus:bg-white/[0.07] focus:ring-1 focus:ring-primary-500/30";
+  "w-full rounded-xl border border-card-border bg-card-bg px-4 py-3 text-sm text-fg placeholder-subtle outline-none transition-all duration-200 focus:border-primary-500/50 focus:bg-card-hover focus:ring-1 focus:ring-primary-500/30";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -93,7 +93,7 @@ export default function Contact() {
         className="pointer-events-none absolute inset-0 overflow-hidden"
         aria-hidden="true"
       >
-        <div className="absolute left-1/2 top-0 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary-500/5 blur-[120px]" />
+        <div className="glow-layer absolute left-1/2 top-0 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary-500/5 blur-[120px]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -109,7 +109,7 @@ export default function Contact() {
             Let&rsquo;s Work{" "}
             <span className="text-gradient">Together</span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-surface-200/70 sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
             Tell us about your project and we&rsquo;ll get back to you within 24
             hours.
           </p>
@@ -143,7 +143,7 @@ export default function Contact() {
             >
               {/* Name */}
               <div className="sm:col-span-1">
-                <label className="mb-1.5 block text-sm font-medium text-surface-200/80">
+                <label className="mb-1.5 block text-sm font-medium text-body">
                   Name <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -161,7 +161,7 @@ export default function Contact() {
 
               {/* Email */}
               <div className="sm:col-span-1">
-                <label className="mb-1.5 block text-sm font-medium text-surface-200/80">
+                <label className="mb-1.5 block text-sm font-medium text-body">
                   Email <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -185,7 +185,7 @@ export default function Contact() {
 
               {/* Phone */}
               <div className="sm:col-span-1">
-                <label className="mb-1.5 block text-sm font-medium text-surface-200/80">
+                <label className="mb-1.5 block text-sm font-medium text-body">
                   Phone
                 </label>
                 <input
@@ -198,7 +198,7 @@ export default function Contact() {
 
               {/* Company */}
               <div className="sm:col-span-1">
-                <label className="mb-1.5 block text-sm font-medium text-surface-200/80">
+                <label className="mb-1.5 block text-sm font-medium text-body">
                   Company
                 </label>
                 <input
@@ -211,15 +211,15 @@ export default function Contact() {
 
               {/* Project Type */}
               <div className="sm:col-span-2">
-                <label className="mb-1.5 block text-sm font-medium text-surface-200/80">
+                <label className="mb-1.5 block text-sm font-medium text-body">
                   Project Type
                 </label>
                 <select className={inputBase} {...register("projectType")}>
-                  <option value="" className="bg-surface-900">
+                  <option value="" className="bg-bg-alt">
                     Select a project type
                   </option>
                   {projectTypes.map((type) => (
-                    <option key={type} value={type} className="bg-surface-900">
+                    <option key={type} value={type} className="bg-bg-alt">
                       {type}
                     </option>
                   ))}
@@ -228,7 +228,7 @@ export default function Contact() {
 
               {/* Message */}
               <div className="sm:col-span-2">
-                <label className="mb-1.5 block text-sm font-medium text-surface-200/80">
+                <label className="mb-1.5 block text-sm font-medium text-body">
                   Message <span className="text-red-400">*</span>
                 </label>
                 <textarea
@@ -291,16 +291,16 @@ export default function Contact() {
                 <Wrapper
                   key={label}
                   {...linkProps}
-                  className="glass group flex items-center gap-4 rounded-2xl p-5 transition-colors duration-300 hover:bg-white/[0.08]"
+                  className="glass group flex items-center gap-4 rounded-2xl p-5 transition-colors duration-300 hover:bg-card-hover"
                 >
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 ring-1 ring-white/10 transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-primary-500/15">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 ring-1 ring-card-border transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-primary-500/15">
                     <Icon className="h-5 w-5 text-primary-400" />
                   </div>
                   <div>
-                    <p className="text-xs font-medium uppercase tracking-wider text-surface-200/50">
+                    <p className="text-xs font-medium uppercase tracking-wider text-muted">
                       {label}
                     </p>
-                    <p className="mt-0.5 text-sm font-medium text-white">
+                    <p className="mt-0.5 text-sm font-medium text-fg">
                       {value}
                     </p>
                   </div>
@@ -311,9 +311,9 @@ export default function Contact() {
             {/* Response time notice */}
             <div className="glass flex items-center gap-3 rounded-2xl p-5">
               <Clock className="h-5 w-5 shrink-0 text-accent-400" />
-              <p className="text-sm leading-relaxed text-surface-200/70">
+              <p className="text-sm leading-relaxed text-muted">
                 We typically respond within{" "}
-                <span className="font-semibold text-white">24 hours</span>.
+                <span className="font-semibold text-fg">24 hours</span>.
               </p>
             </div>
           </motion.div>

@@ -64,7 +64,7 @@ export default function Process() {
         className="pointer-events-none absolute inset-0 overflow-hidden"
         aria-hidden
       >
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[700px] rounded-full bg-primary-500/5 blur-[120px]" />
+        <div className="glow-layer absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[700px] rounded-full bg-primary-500/5 blur-[120px]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -79,7 +79,7 @@ export default function Process() {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
             How We <span className="text-gradient">Work</span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-surface-200/70 sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
             A clear, collaborative process &mdash; from your first idea to a
             launched product.
           </p>
@@ -116,21 +116,21 @@ export default function Process() {
                 )}
 
                 {/* Number + icon circle */}
-                <div className="relative z-10 flex h-20 w-20 flex-col items-center justify-center rounded-full bg-surface-900 ring-1 ring-white/10 transition-all duration-300 group-hover:ring-primary-500/40 group-hover:shadow-lg group-hover:shadow-primary-500/15">
+                <div className="relative z-10 flex h-20 w-20 flex-col items-center justify-center rounded-full bg-bg-alt ring-1 ring-card-border transition-all duration-300 group-hover:ring-primary-500/40 group-hover:shadow-lg group-hover:shadow-primary-500/15">
                   <span className="text-xs font-bold text-primary-400">
                     {number}
                   </span>
                   <Icon
-                    className="mt-0.5 h-5 w-5 text-surface-200/80 transition-colors duration-300 group-hover:text-white"
+                    className="mt-0.5 h-5 w-5 text-body transition-colors duration-300 group-hover:text-fg"
                     strokeWidth={1.75}
                   />
                 </div>
 
                 {/* Content */}
-                <h3 className="mt-4 text-base font-semibold text-white">
+                <h3 className="mt-4 text-base font-semibold text-fg">
                   {title}
                 </h3>
-                <p className="mt-2 max-w-[220px] text-sm leading-relaxed text-surface-200/60">
+                <p className="mt-2 max-w-[220px] text-sm leading-relaxed text-muted">
                   {description}
                 </p>
               </motion.div>

@@ -1,4 +1,5 @@
 import { lazy, Suspense } from 'react'
+import { ThemeProvider } from './hooks/useTheme'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -23,27 +24,29 @@ function SectionLoader() {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-surface-950 text-white overflow-x-hidden">
-      <Navbar />
-      <main>
-        <Hero />
-        <Suspense fallback={<SectionLoader />}>
-          <Services />
-          <TechStack />
-          <Portfolio />
-          <Stats />
-          <Testimonials />
-          <WhyChooseUs />
-          <Process />
-          <Industries />
-          <CTA />
-          <Contact />
-          <FAQ />
-          <Blog />
-        </Suspense>
-      </main>
-      <Footer />
-      <ScrollToTop />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-bg text-fg overflow-x-hidden transition-colors duration-300">
+        <Navbar />
+        <main>
+          <Hero />
+          <Suspense fallback={<SectionLoader />}>
+            <Services />
+            <TechStack />
+            <Portfolio />
+            <Stats />
+            <Testimonials />
+            <WhyChooseUs />
+            <Process />
+            <Industries />
+            <CTA />
+            <Contact />
+            <FAQ />
+            <Blog />
+          </Suspense>
+        </main>
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </ThemeProvider>
   )
 }

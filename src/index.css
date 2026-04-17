@@ -24,7 +24,33 @@
   --color-surface-900: #0f172a;
   --color-surface-950: #020617;
 
+  /* Semantic theme tokens — light mode defaults */
+  --color-bg: #f8fafc;
+  --color-bg-alt: #ffffff;
+  --color-fg: #0f172a;
+  --color-body: #334155;
+  --color-muted: #64748b;
+  --color-subtle: #94a3b8;
+  --color-card-bg: rgba(255, 255, 255, 0.7);
+  --color-card-border: rgba(0, 0, 0, 0.08);
+  --color-card-hover: rgba(0, 0, 0, 0.04);
+  --color-glow: 0.25;
+
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Dark mode overrides */
+.dark {
+  --color-bg: #020617;
+  --color-bg-alt: #0f172a;
+  --color-fg: #ffffff;
+  --color-body: #e2e8f0;
+  --color-muted: #94a3b8;
+  --color-subtle: #64748b;
+  --color-card-bg: rgba(255, 255, 255, 0.05);
+  --color-card-border: rgba(255, 255, 255, 0.1);
+  --color-card-hover: rgba(255, 255, 255, 0.08);
+  --color-glow: 1;
 }
 
 @layer base {
@@ -35,24 +61,48 @@
   }
 
   body {
-    @apply bg-surface-950 text-white font-sans;
+    @apply bg-bg text-fg font-sans;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   ::selection {
-    @apply bg-primary-500/30 text-white;
+    background: rgba(99, 102, 241, 0.2);
+  }
+
+  .dark ::selection {
+    background: rgba(99, 102, 241, 0.3);
+    color: white;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-500 via-accent-500 to-primary-500 bg-clip-text text-transparent;
+  }
+
+  .dark .text-gradient {
+    @apply from-primary-400 via-accent-400 to-primary-400;
   }
 
   .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+    background-color: var(--color-card-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--color-card-border);
+    border-radius: 1rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
   }
 
   .glass-strong {
-    @apply bg-white/10 backdrop-blur-2xl border border-white/15;
+    background-color: var(--color-card-hover);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid var(--color-card-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .glow-layer {
+    opacity: var(--color-glow);
+    transition: opacity 0.3s ease;
   }
 }

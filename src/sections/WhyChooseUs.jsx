@@ -72,7 +72,7 @@ export default function WhyChooseUs() {
         className="pointer-events-none absolute inset-0 overflow-hidden"
         aria-hidden
       >
-        <div className="absolute left-1/2 top-0 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary-500/5 blur-3xl" />
+        <div className="glow-layer absolute left-1/2 top-0 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary-500/5 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -87,7 +87,7 @@ export default function WhyChooseUs() {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
             Why <span className="text-gradient">Bytevora</span>?
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-surface-200/70 sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
             We&apos;re not just developers &mdash; we&apos;re your
             growth-focused technology partner.
           </p>
@@ -106,7 +106,7 @@ export default function WhyChooseUs() {
               key={title}
               variants={fadeUp}
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              className="group relative rounded-2xl glass p-6 sm:p-8 transition-colors duration-300 hover:bg-white/[0.08]"
+              className="group relative rounded-2xl glass p-6 sm:p-8 transition-colors duration-300 hover:bg-card-hover"
             >
               {/* Icon in gradient circle */}
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-primary-500 to-accent-500 shadow-lg shadow-primary-500/20 transition-shadow duration-300 group-hover:shadow-primary-500/35">
@@ -114,10 +114,10 @@ export default function WhyChooseUs() {
               </div>
 
               {/* Content */}
-              <h3 className="mt-5 text-lg font-semibold text-white">
+              <h3 className="mt-5 text-lg font-semibold text-fg">
                 {title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-surface-200/70">
+              <p className="mt-2 text-sm leading-relaxed text-muted">
                 {description}
               </p>
             </motion.div>
