@@ -17,7 +17,7 @@ const staggerContainer = {
 
 const posts = [
   {
-    title: "Why Every Business Needs an AI Strategy in 2025",
+    title: "Why Every Business Needs an AI Strategy in 2026",
     description:
       "Practical steps to evaluate, adopt, and scale AI across your organization.",
   },

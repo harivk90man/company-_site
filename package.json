@@ -1,8 +1,8 @@
 {
-  "name": "bytevora-solutions",
+  "name": "mudhal-iq",
   "private": true,
-  "version": "1.0.0",
-  "description": "Bytevora Solutions — From idea to launch, software built for real business impact",
+  "version": "2.0.0",
+  "description": "Mudhal IQ — From idea to launch, AI-powered software built for real business impact",
   "type": "module",
   "scripts": {
     "dev": "vite",

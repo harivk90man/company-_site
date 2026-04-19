@@ -47,12 +47,12 @@ export default function Navbar() {
 
         <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group" aria-label="Bytevora home">
+          <a href="#" className="flex items-center gap-2 group" aria-label="Mudhal IQ home">
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 shadow-lg shadow-primary-500/25 transition-shadow group-hover:shadow-primary-500/40">
               <Zap className="h-4 w-4 text-white" strokeWidth={2.5} />
             </span>
             <span className="text-xl font-bold tracking-tight text-fg">
-              Byte<span className="text-gradient">vora</span>
+              Mudhal<span className="text-gradient"> IQ</span>
             </span>
           </a>
 

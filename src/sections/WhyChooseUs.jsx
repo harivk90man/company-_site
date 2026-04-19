@@ -85,7 +85,7 @@ export default function WhyChooseUs() {
           viewport={{ once: true, margin: "-100px" }}
         >
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-            Why <span className="text-gradient">Bytevora</span>?
+            Why <span className="text-gradient">Mudhal IQ</span>?
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
             We&apos;re not just developers &mdash; we&apos;re your

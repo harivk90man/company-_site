@@ -20,7 +20,7 @@ const staggerContainer = {
 const testimonials = [
   {
     quote:
-      "Bytevora transformed our maintenance operations completely. The system they built is intuitive and exactly what we needed.",
+      "Mudhal IQ transformed our maintenance operations completely. The system they built is intuitive and exactly what we needed.",
     name: "Resident Association Board",
     company: "Ashirvadh Castle Rock Villas",
     stars: 5,

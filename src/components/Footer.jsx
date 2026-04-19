@@ -77,7 +77,7 @@ export default function Footer() {
                 <Zap className="h-4 w-4 text-white" strokeWidth={2.5} />
               </span>
               <span className="text-xl font-bold tracking-tight text-fg">
-                Byte<span className="text-gradient">vora</span>
+                Mudhal<span className="text-gradient"> IQ</span>
               </span>
             </a>
             <p className="mt-4 text-sm font-medium text-gradient leading-relaxed">
@@ -155,11 +155,11 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               <li>
                 <a
-                  href="mailto:hello@bytevora.com"
+                  href="mailto:hello@mudhaliq.com"
                   className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-fg"
                 >
                   <Mail className="h-4 w-4 text-primary-400" />
-                  hello@bytevora.com
+                  hello@mudhaliq.com
                 </a>
               </li>
               <li className="inline-flex items-center gap-2 text-sm text-muted">
@@ -201,10 +201,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-6 flex flex-col items-center justify-between gap-3 sm:flex-row">
           <p className="text-xs text-muted">
-            &copy; 2025 Bytevora Solutions. All rights reserved.
+            &copy; 2026 Mudhal IQ. All rights reserved.
           </p>
           <p className="text-xs text-muted">
-            Built with precision.
+            Built with intelligence.
           </p>
         </div>
       </div>

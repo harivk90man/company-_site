@@ -37,13 +37,17 @@ export default function CTA() {
         aria-hidden="true"
       />
 
-      {/* Glow orbs */}
-      <div
+      {/* Glow orbs - animated */}
+      <motion.div
         className="glow-layer pointer-events-none absolute -top-24 left-1/4 h-[400px] w-[400px] rounded-full bg-primary-500/15 blur-[120px]"
+        animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         aria-hidden="true"
       />
-      <div
+      <motion.div
         className="glow-layer pointer-events-none absolute -bottom-24 right-1/4 h-[350px] w-[350px] rounded-full bg-accent-500/15 blur-[120px]"
+        animate={{ x: [0, -30, 0], y: [0, 20, 0] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         aria-hidden="true"
       />
 
@@ -74,21 +78,25 @@ export default function CTA() {
           variants={fadeUp}
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
-          <a
+          <motion.a
             href="#contact"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/30 hover:brightness-110"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
           >
             Talk to Us
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </a>
+          </motion.a>
 
-          <a
+          <motion.a
             href="#contact"
             className="inline-flex items-center gap-2 rounded-full border border-card-border px-8 py-4 text-sm font-semibold text-fg transition-all duration-300 hover:border-primary-500/30 hover:bg-card-hover"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
           >
             <FileText className="h-4 w-4" />
             Get a Proposal
-          </a>
+          </motion.a>
         </motion.div>
       </motion.div>
     </section>

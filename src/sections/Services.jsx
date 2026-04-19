@@ -130,8 +130,8 @@ export default function Services() {
                 {description}
               </p>
 
-              {/* Subtle arrow link → scrolls to contact */}
-              <a href="#contact" className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary-400 transition-colors duration-300 hover:text-primary-300">
+              {/* Subtle arrow link -> scrolls to contact */}
+              <a href="#contact" className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary-400 transition-all duration-300 hover:text-primary-300 hover:gap-2.5">
                 <span>Get started</span>
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
